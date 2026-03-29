@@ -710,6 +710,260 @@
     background: var(--white);
   }
 
+  /* PROJETS */
+  .projet-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 36px;
+    background: var(--dark);
+    border-left: 4px solid var(--accent2);
+  }
+  .projet-title-block .projet-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .projet-title-block h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .projet-title-block p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .projet-badges { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+  .projet-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    padding: 5px 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .projet-badge.blue {
+    background: rgba(30,111,201,0.15);
+    border: 1px solid rgba(30,111,201,0.35);
+    color: #6db3ff;
+  }
+  .projet-badge.orange {
+    background: rgba(201,74,30,0.12);
+    border: 1px solid rgba(201,74,30,0.3);
+    color: #ff9a7c;
+  }
+
+  .projet-infos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .projet-info-cell {
+    background: var(--white);
+    padding: 20px 24px;
+  }
+  .projet-info-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .projet-info-val {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .projet-section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    color: var(--dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+
+  .projet-sommaire {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    margin-bottom: 40px;
+  }
+  .sommaire-item {
+    background: var(--bg);
+    padding: 20px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: background 0.2s;
+  }
+  .sommaire-item:hover { background: var(--white); }
+  .sommaire-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .sommaire-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.35;
+    padding-top: 4px;
+  }
+
+  .projet-etapes { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .etape-card {
+    border: 1px solid var(--border);
+    background: var(--white);
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .etape-card:hover { border-color: rgba(30,111,201,0.4); }
+  .etape-header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+  }
+  .etape-num-block {
+    padding: 14px 20px;
+    background: var(--dark);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+    min-width: 60px;
+    text-align: center;
+    line-height: 1;
+  }
+  .etape-title-block {
+    padding: 12px 20px;
+    flex: 1;
+  }
+  .etape-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .etape-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-top: 2px;
+    letter-spacing: 0.05em;
+  }
+  .etape-body { padding: 20px 24px; }
+  .etape-steps { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .etape-steps li {
+    font-size: 0.85rem;
+    color: var(--mid);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .etape-steps li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent2);
+    font-size: 0.75rem;
+    top: 2px;
+  }
+  .etape-steps li strong { color: var(--dark); font-weight: 600; }
+  .etape-result {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(16,185,129,0.05);
+    border: 1px solid rgba(16,185,129,0.2);
+    border-left: 3px solid #10b981;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #065f46;
+    line-height: 1.6;
+  }
+  .etape-warning {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(245,158,11,0.05);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-left: 3px solid #f59e0b;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #92400e;
+    line-height: 1.6;
+  }
+
+  .projet-recap {
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .recap-header {
+    background: var(--dark);
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    gap: 10px;
+  }
+  .recap-header span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .recap-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    gap: 10px;
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    transition: background 0.15s;
+    align-items: center;
+  }
+  .recap-row:hover { background: var(--bg2); }
+  .recap-row span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--mid);
+  }
+  .recap-row span:first-child { color: var(--dark); font-weight: 500; }
+  .recap-ok {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #065f46;
+    background: rgba(16,185,129,0.08);
+    border: 1px solid rgba(16,185,129,0.25);
+    padding: 3px 10px;
+    letter-spacing: 0.08em;
+  }
+
   /* SCROLL BAR */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -728,6 +982,7 @@
     <li><a href="#experiences">Postes</a></li>
     <li><a href="#pages">Le site</a></li>
     <li><a href="#veille">Veille</a></li>
+    <li><a href="#projets">Mes Projets</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1008,12 +1263,471 @@
 
 <div class="divider"></div>
 
+<!-- MES PROJETS -->
+<section id="projets">
+  <div class="section-inner">
+    <div class="s-label reveal">05 — Projets réalisés</div>
+    <div class="s-title reveal">Mes Projets</div>
+
+    <!-- Projet 1 : AD -->
+    <div class="projet-header reveal">
+      <div class="projet-title-block">
+        <div class="projet-num">Projet 01 · Épreuve E6</div>
+        <h3>Déploiement d'un domaine<br>Active Directory</h3>
+        <p>Windows Server 2025 — Administration 100% GUI (interface graphique)</p>
+      </div>
+      <div class="projet-badges">
+        <span class="projet-badge blue">Windows Server 2025</span>
+        <span class="projet-badge blue">Active Directory DS</span>
+        <span class="projet-badge orange">BTS SIO SISR — E6</span>
+      </div>
+    </div>
+
+    <div class="projet-infos reveal">
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Serveur</div>
+        <div class="projet-info-val">SVR-WND</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Adresse IP</div>
+        <div class="projet-info-val">192.168.1.2 /24</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Domaine</div>
+        <div class="projet-info-val">SRV.WND</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Approche</div>
+        <div class="projet-info-val">100% GUI</div>
+      </div>
+    </div>
+
+    <div class="projet-sommaire reveal">
+      <div class="sommaire-item"><div class="sommaire-num">1</div><div class="sommaire-text">Configuration réseau du serveur</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">2</div><div class="sommaire-text">Installation du rôle AD DS</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">3</div><div class="sommaire-text">Création du domaine (promotion DC)</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">4</div><div class="sommaire-text">Configuration du DNS</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">5</div><div class="sommaire-text">Installation et configuration du DHCP</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">6</div><div class="sommaire-text">Création de la structure OU</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">7</div><div class="sommaire-text">Création des utilisateurs et groupes</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">8</div><div class="sommaire-text">Création et application des GPO</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">9</div><div class="sommaire-text">Tests et vérifications</div></div>
+    </div>
+
+    <div class="projet-etapes reveal">
+
+      <!-- Partie 1 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">1</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Configuration réseau du serveur</div>
+            <div class="etape-subtitle">IP statique + renommage du serveur</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Ouvrir le Centre Réseau et partage → Modifier les paramètres de la carte → Propriétés TCP/IPv4</li>
+            <li>Saisir l'adresse IP statique : <strong>192.168.1.2</strong> | Masque : <strong>255.255.255.0</strong> | Passerelle : <strong>192.168.1.1</strong></li>
+            <li>DNS préféré : <strong>127.0.0.1</strong> (le serveur pointe vers lui-même)</li>
+            <li>Renommer le serveur : Clic droit Démarrer → Système → Modifier → Nom : <strong>SVR-WND</strong> → Redémarrer</li>
+          </ul>
+          <div class="etape-warning">⚠ Le DNS préféré DOIT être 127.0.0.1. Si tu mets 8.8.8.8, la promotion du domaine échouera.</div>
+          <div class="etape-result">✔ Résultat attendu : Dans le Gestionnaire de serveur, le nom affiché en haut à droite est SVR-WND.</div>
+        </div>
+      </div>
+
+      <!-- Partie 2 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">2</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Installation du rôle AD DS</div>
+            <div class="etape-subtitle">Active Directory Domain Services via le Gestionnaire de serveur</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Ouvrir le Gestionnaire de serveur → Gérer → <strong>Ajouter des rôles et fonctionnalités</strong></li>
+            <li>Type d'installation : <strong>Installation basée sur un rôle ou une fonctionnalité</strong></li>
+            <li>Sélectionner le serveur <strong>SVR-WND</strong></li>
+            <li>Cocher <strong>Services AD DS</strong> → Ajouter les fonctionnalités → Suivant → Installer</li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : "Installation réussie sur SVR-WND" — Services AD DS installés.</div>
+        </div>
+      </div>
+
+      <!-- Partie 3 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">3</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Création du domaine — Promotion en contrôleur de domaine</div>
+            <div class="etape-subtitle">Création de la forêt SRV.WND</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Cliquer sur le lien bleu : <strong>"Promouvoir ce serveur en contrôleur de domaine"</strong></li>
+            <li>Choisir : <strong>Ajouter une nouvelle forêt</strong> → Nom de domaine racine : <strong>SRV.WND</strong></li>
+            <li>Niveau fonctionnel : <strong>Windows Server 2025</strong> | Cocher Serveur DNS + Catalogue global</li>
+            <li>Mot de passe DSRM : définir et noter soigneusement</li>
+            <li>Vérifier le nom NetBIOS : <strong>SRV</strong> → Suivant → Installer → Le serveur redémarre automatiquement</li>
+          </ul>
+          <div class="etape-warning">⚠ Ne pas choisir "Ajouter un domaine à une forêt existante" — ici on crée tout de zéro.</div>
+          <div class="etape-result">✔ Résultat attendu : Connexion possible avec ADMINISTRATOR@SRV.WND. Dans le Gestionnaire, le serveur indique "SRV.WND" comme domaine.</div>
+        </div>
+      </div>
+
+      <!-- Partie 4 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">4</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Configuration du DNS</div>
+            <div class="etape-subtitle">Zone inverse + redirecteur vers 8.8.8.8</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Outils → <strong>DNS</strong> → Déployer SVR-WND → Zones de recherche inversée</li>
+            <li>Nouvelle zone → Principale → Zone de recherche inversée IPv4 → ID réseau : <strong>192.168.1</strong></li>
+            <li>Ajouter un redirecteur : <strong>8.8.8.8</strong> (DNS Google pour la résolution externe)</li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : nslookup SRV.WND → répond avec 192.168.1.2. La résolution interne et externe fonctionne.</div>
+        </div>
+      </div>
+
+      <!-- Partie 5 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">5</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Installation et configuration du DHCP</div>
+            <div class="etape-subtitle">Étendue 192.168.1.50–200</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Ajouter le rôle <strong>Serveur DHCP</strong> via le Gestionnaire de serveur</li>
+            <li>Après installation → Terminer la configuration DHCP → Autoriser dans l'AD</li>
+            <li>Créer une étendue : plage <strong>192.168.1.50 → 192.168.1.200</strong></li>
+            <li>Options DHCP : Passerelle <strong>192.168.1.1</strong> | DNS <strong>192.168.1.2</strong> | Domaine <strong>SRV.WND</strong></li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : Les clients obtiennent une IP automatiquement dans la plage 192.168.1.50–200 avec les bonnes options réseau.</div>
+        </div>
+      </div>
+
+      <!-- Partie 6 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">6</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Création de la structure OU</div>
+            <div class="etape-subtitle">Unités d'organisation dans Utilisateurs et ordinateurs AD</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Outils → <strong>Utilisateurs et ordinateurs Active Directory</strong></li>
+            <li>Clic droit sur SRV.WND → Nouveau → Unité d'organisation → Nom : <strong>SVR-WND</strong></li>
+            <li>Dans SVR-WND, créer : <strong>Utilisateurs</strong> / <strong>Groupes</strong> / <strong>Ordinateurs</strong></li>
+            <li>Dans Utilisateurs, créer : <strong>Informatique</strong> et <strong>Commercial</strong></li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : Arborescence SVR-WND → Utilisateurs (Informatique / Commercial) / Groupes / Ordinateurs visible dans la console AD.</div>
+        </div>
+      </div>
+
+      <!-- Partie 7 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">7</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Création des utilisateurs et groupes</div>
+            <div class="etape-subtitle">4 comptes utilisateurs + 2 groupes de sécurité</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Dans OU <strong>Informatique</strong> : créer <strong>j.dupont</strong> (Jean Dupont) et <strong>m.martin</strong> (Marie Martin)</li>
+            <li>Dans OU <strong>Commercial</strong> : créer <strong>p.bernard</strong> (Pierre Bernard) et <strong>s.leroy</strong> (Sophie Leroy)</li>
+            <li>Dans OU <strong>Groupes</strong> : créer <strong>GRP_Informatique</strong> et <strong>GRP_Commercial</strong> (type : Sécurité / étendue : Domaine local)</li>
+            <li>Ajouter j.dupont et m.martin dans GRP_Informatique ; p.bernard et s.leroy dans GRP_Commercial</li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : 4 comptes actifs, 2 groupes avec leurs membres respectifs. Connexion possible avec chaque compte.</div>
+        </div>
+      </div>
+
+      <!-- Partie 8 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">8</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Création et application des GPO</div>
+            <div class="etape-subtitle">5 stratégies de groupe déployées</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li><strong>GPO_Securite_Mdp</strong> (liée au domaine) : mot de passe 12 car. min., complexité activée, expiration 90j, historique 5 mdp</li>
+            <li><strong>GPO_Verrouillage</strong> (liée à OU SVR-WND) : verrouillage après 5 échecs, durée 30 min + écran de veille 10 min avec mot de passe</li>
+            <li><strong>GPO_Fond_Ecran</strong> (liée à OU Utilisateurs) : fond d'écran imposé à tous — C:\Windows\Web\Wallpaper\Windows\img0.jpg</li>
+            <li><strong>GPO_Restriction_Panel</strong> (liée à OU Commercial) : accès au Panneau de configuration bloqué pour les commerciaux uniquement</li>
+            <li><strong>GPO_Redirection_Docs</strong> (liée à OU Utilisateurs) : dossier Documents redirigé vers \\SVR-WND\Partages\%username%</li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : gpresult /r sur j.dupont affiche GPO_Securite_Mdp, GPO_Verrouillage, GPO_Fond_Ecran, GPO_Redirection_Docs appliquées.</div>
+        </div>
+      </div>
+
+      <!-- Partie 9 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">9</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Tests et vérifications</div>
+            <div class="etape-subtitle">Validation complète de l'infrastructure</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Test DNS : <strong>nslookup SRV.WND</strong> → répond avec 192.168.1.2 ✔</li>
+            <li>Test GPO : <strong>gpupdate /force</strong> puis <strong>gpresult /r</strong> sur le compte j.dupont ✔</li>
+            <li>Test verrouillage : 5 mauvaises tentatives sur j.dupont → message "compte verrouillé" ✔</li>
+            <li>Test restriction Panneau de configuration : p.bernard (Commercial) bloqué, j.dupont (IT) non affecté ✔</li>
+          </ul>
+          <div class="etape-result">✔ Toutes les vérifications sont concluantes. L'infrastructure AD est opérationnelle.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Récapitulatif -->
+    <div class="projet-section-title reveal">Récapitulatif du déploiement</div>
+    <div class="projet-recap reveal">
+      <div class="recap-header">
+        <span>Élément</span>
+        <span>Configuration</span>
+        <span>Statut</span>
+      </div>
+      <div class="recap-row"><span>Serveur</span><span>SVR-WND — IP 192.168.1.2 statique</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Domaine AD</span><span>SRV.WND — Niveau fonctionnel Windows Server 2025</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>DNS</span><span>Zones directe + inverse + redirecteur 8.8.8.8</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>DHCP</span><span>Étendue 192.168.1.50–200 + options passerelle/DNS</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Structure OU</span><span>SVR-WND / Utilisateurs (Informatique, Commercial) / Groupes / Ordinateurs</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Utilisateurs</span><span>j.dupont, m.martin (IT) — p.bernard, s.leroy (Commercial)</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Groupes</span><span>GRP_Informatique, GRP_Commercial</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>GPO_Securite_Mdp</span><span>Mdp 12 car., complexe, 90j, historique 5</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>GPO_Verrouillage</span><span>5 échecs → verrouillé 30 min + écran veille 10 min</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>GPO_Fond_Ecran</span><span>Fond corporate imposé à tous les utilisateurs</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>GPO_Restriction_Panel</span><span>Panneau config bloqué pour OU Commercial</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>GPO_Redirection_Docs</span><span>Documents → \\SVR-WND\Partages\%username%</span><span><span class="recap-ok">✔ OK</span></span></div>
+    </div>
+
+    <!-- Séparateur entre projets -->
+    <div style="height:60px;"></div>
+
+    <!-- Projet 2 : GLPI / LDAP -->
+    <div class="projet-header reveal" style="border-left-color: var(--accent2);">
+      <div class="projet-title-block">
+        <div class="projet-num">Projet 02 · Épreuve E6</div>
+        <h3>Mise en place de GLPI<br>& Intégration LDAP / AD</h3>
+        <p>Authentification Active Directory via LDAP — Domaine SRV.WND — GLPI 10.x</p>
+      </div>
+      <div class="projet-badges">
+        <span class="projet-badge blue">GLPI 10.x</span>
+        <span class="projet-badge blue">LDAP / Active Directory</span>
+        <span class="projet-badge orange">BTS SIO SISR — E6</span>
+      </div>
+    </div>
+
+    <div class="projet-infos reveal">
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Serveur AD</div>
+        <div class="projet-info-val">192.168.1.2</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Domaine</div>
+        <div class="projet-info-val">SRV.WND</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Protocole</div>
+        <div class="projet-info-val">LDAP (port 389)</div>
+      </div>
+      <div class="projet-info-cell">
+        <div class="projet-info-label">Compte de service</div>
+        <div class="projet-info-val">srv_glpi@SRV.WND</div>
+      </div>
+    </div>
+
+    <div class="projet-sommaire reveal">
+      <div class="sommaire-item"><div class="sommaire-num">1</div><div class="sommaire-text">Introduction et objectifs</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">2</div><div class="sommaire-text">Prérequis et compte de service AD</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">3</div><div class="sommaire-text">Configuration LDAP dans GLPI</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">4</div><div class="sommaire-text">Import des utilisateurs depuis l'AD</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">5</div><div class="sommaire-text">Test de l'authentification</div></div>
+      <div class="sommaire-item"><div class="sommaire-num">6</div><div class="sommaire-text">Gestion des profils et des droits</div></div>
+    </div>
+
+    <div class="projet-etapes reveal">
+
+      <!-- Partie 1 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">1</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Introduction et objectifs</div>
+            <div class="etape-subtitle">Pourquoi intégrer GLPI à l'Active Directory ?</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Permettre aux utilisateurs de se connecter à GLPI avec leurs <strong>identifiants Windows</strong>, sans créer de comptes séparés</li>
+            <li>Importer automatiquement les comptes utilisateurs depuis l'AD (nom, prénom, e-mail)</li>
+            <li><strong>Centraliser la gestion des identités</strong> : un seul mot de passe pour Windows et GLPI</li>
+            <li>Sécuriser les accès en s'appuyant sur les <strong>politiques AD existantes</strong> (GPO_Securite_Mdp, GPO_Verrouillage)</li>
+          </ul>
+          <div class="etape-result">✔ Cette intégration s'appuie sur l'infrastructure AD déjà déployée dans le Projet 1 (domaine SRV.WND, serveur SVR-WND à 192.168.1.2).</div>
+        </div>
+      </div>
+
+      <!-- Partie 2 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">2</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Prérequis — Création du compte de service AD</div>
+            <div class="etape-subtitle">Compte srv_glpi avec droits lecture seule sur l'AD</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>S'assurer que le rôle AD DS est opérationnel, le domaine <strong>SRV.WND</strong> actif et le port LDAP <strong>389</strong> ouvert dans le pare-feu Windows</li>
+            <li>Ouvrir <strong>Utilisateurs et ordinateurs Active Directory</strong> → créer un utilisateur : <strong>srv_glpi</strong></li>
+            <li>Définir un mot de passe fort, cocher <strong>"Le mot de passe n'expire jamais"</strong></li>
+            <li>Accorder des droits en lecture seule : ajouter au groupe <strong>"Lecteurs du journal des événements"</strong></li>
+            <li>DN complet du compte : <strong>CN=srv_glpi,CN=Users,DC=SRV,DC=WND</strong></li>
+          </ul>
+          <div class="etape-result">✔ Le compte srv_glpi est créé et dispose des droits minimum nécessaires pour interroger l'annuaire sans risque de sécurité.</div>
+        </div>
+      </div>
+
+      <!-- Partie 3 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">3</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Configuration de l'authentification LDAP dans GLPI</div>
+            <div class="etape-subtitle">Paramètres de connexion + test</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Se connecter à GLPI avec le compte administrateur local → <strong>Configuration → Authentification → Annuaires LDAP</strong> → Ajouter</li>
+            <li>Nom de l'annuaire : <strong>Active Directory SRV.WND</strong> | Serveur : <strong>192.168.1.2</strong> | Port : <strong>389</strong> | Version LDAP : <strong>3</strong></li>
+            <li>BaseDN : <strong>DC=SRV,DC=WND</strong> | Filtre : <strong>(&(objectClass=user)(objectCategory=person))</strong></li>
+            <li>Bind DN : <strong>CN=srv_glpi,CN=Users,DC=SRV,DC=WND</strong> | Mot de passe du compte srv_glpi</li>
+            <li>Champs de mapping : login → <strong>samAccountName</strong> | e-mail → <strong>mail</strong> | nom → <strong>sn</strong> | prénom → <strong>givenName</strong></li>
+            <li>Cliquer sur <strong>"Tester"</strong> → vérifier le message "Connexion réussie" → Enregistrer</li>
+          </ul>
+          <div class="etape-warning">⚠ En cas d'erreur : vérifier que le port 389 est ouvert (pare-feu Windows), l'adresse IP 192.168.1.2 joignable (ping), et le DN de connexion exact.</div>
+          <div class="etape-result">✔ Résultat attendu : message "Connexion réussie" au test. L'annuaire LDAP apparaît dans la liste des annuaires configurés.</div>
+        </div>
+      </div>
+
+      <!-- Partie 4 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">4</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Import des utilisateurs depuis l'Active Directory</div>
+            <div class="etape-subtitle">Import manuel + synchronisation automatique</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Aller dans <strong>Administration → Utilisateurs</strong> → cliquer sur <strong>"Importer depuis LDAP"</strong></li>
+            <li>Sélectionner l'annuaire <strong>Active Directory SRV.WND</strong> → cliquer sur "Rechercher"</li>
+            <li>Les comptes AD apparaissent : <strong>j.dupont, m.martin, p.bernard, s.leroy</strong> → les cocher → Importer</li>
+            <li>Vérifier que les comptes sont visibles dans <strong>Administration → Utilisateurs</strong> avec nom, prénom et e-mail</li>
+            <li><strong>Synchronisation automatique</strong> : Configuration → Actions automatiques → activer <strong>LdapSync</strong> → fréquence : toutes les 24h</li>
+          </ul>
+          <div class="etape-result">✔ Résultat attendu : les 4 utilisateurs AD sont importés dans GLPI avec leurs informations. La liste se met à jour automatiquement.</div>
+        </div>
+      </div>
+
+      <!-- Partie 5 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">5</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Vérification et test de l'authentification</div>
+            <div class="etape-subtitle">Connexion avec identifiants Windows</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Se déconnecter du compte administrateur GLPI</li>
+            <li>Sur la page de connexion GLPI, saisir un identifiant AD : <strong>j.dupont</strong> (ou m.martin, p.bernard, s.leroy)</li>
+            <li>Saisir le <strong>mot de passe Windows</strong> de l'utilisateur (défini dans l'AD)</li>
+            <li>Vérifier que l'utilisateur accède à GLPI avec son profil et que ses informations sont correctes</li>
+          </ul>
+          <div class="etape-result">✔ Résultats attendus : connexion avec login/mdp Windows réussie · informations (nom, prénom, e-mail) automatiquement récupérées depuis l'AD · modification du mdp dans l'AD immédiatement prise en compte dans GLPI.</div>
+        </div>
+      </div>
+
+      <!-- Partie 6 -->
+      <div class="etape-card">
+        <div class="etape-header">
+          <div class="etape-num-block">6</div>
+          <div class="etape-title-block">
+            <div class="etape-title">Gestion des profils et des droits GLPI</div>
+            <div class="etape-subtitle">Attribution des rôles aux utilisateurs importés</div>
+          </div>
+        </div>
+        <div class="etape-body">
+          <ul class="etape-steps">
+            <li>Aller dans <strong>Administration → Utilisateurs</strong> → cliquer sur l'utilisateur concerné</li>
+            <li>Onglet <strong>"Autorisations"</strong> → cliquer sur "+" pour ajouter une autorisation</li>
+            <li>Sélectionner l'entité : <strong>Entité Racine</strong> (ou entité spécifique)</li>
+            <li>Attribuer le profil selon le rôle : <strong>Technicien</strong> (j.dupont, m.martin — IT) ou <strong>Utilisateur</strong> (p.bernard, s.leroy — Commercial)</li>
+            <li>Enregistrer → vérifier que l'utilisateur voit le bon interface GLPI à sa reconnexion</li>
+          </ul>
+          <div class="etape-result">✔ Les droits sont cohérents avec la structure AD : les membres de GRP_Informatique obtiennent le profil Technicien, les membres de GRP_Commercial obtiennent le profil Utilisateur.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Récapitulatif Projet 2 -->
+    <div class="projet-section-title reveal">Récapitulatif de la configuration</div>
+    <div class="projet-recap reveal">
+      <div class="recap-header">
+        <span>Paramètre</span>
+        <span>Valeur / Configuration</span>
+        <span>Statut</span>
+      </div>
+      <div class="recap-row"><span>Annuaire LDAP</span><span>Active Directory SRV.WND — 192.168.1.2:389</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>BaseDN</span><span>DC=SRV,DC=WND</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Compte de service</span><span>CN=srv_glpi,CN=Users,DC=SRV,DC=WND</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Champ login</span><span>samAccountName</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Import utilisateurs</span><span>Administration → Utilisateurs → Importer depuis LDAP</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Synchronisation auto</span><span>Configuration → Actions automatiques → LdapSync (24h)</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Test de connexion</span><span>Connexion avec login/mdp Windows sur la page GLPI</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Profil Technicien</span><span>j.dupont, m.martin (GRP_Informatique)</span><span><span class="recap-ok">✔ OK</span></span></div>
+      <div class="recap-row"><span>Profil Utilisateur</span><span>p.bernard, s.leroy (GRP_Commercial)</span><span><span class="recap-ok">✔ OK</span></span></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="contact-inner">
       <div class="contact-left">
-        <div class="s-label reveal">05 — Me contacter</div>
+        <div class="s-label reveal">06 — Me contacter</div>
         <div class="s-title reveal">Contact</div>
         <p class="reveal">Alternant en BTS SIO SISR, disponible pour échanger sur mes projets, mon parcours ou toute opportunité professionnelle en lien avec l'administration des systèmes et réseaux.</p>
         <div class="contact-items reveal">
