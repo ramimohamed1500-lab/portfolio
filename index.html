@@ -201,7 +201,7 @@
 
   /* SECTION BASE */
   section { position: relative; }
-  .section-inner { padding: 100px 52px; }
+  .section-inner { padding: 60px 52px; }
   .s-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.68rem;
@@ -505,15 +505,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
+  /* animations reveal désactivées */
 
   /* VEILLE TECHNO */
   .veille-bg { background: var(--white); }
@@ -964,6 +956,100 @@
     letter-spacing: 0.08em;
   }
 
+  /* TABLEAU DE SYNTHESE */
+  .synthese-bg { background: var(--white); }
+  .synthese-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .synthese-meta-cell {
+    background: var(--dark);
+    padding: 18px 24px;
+  }
+  .synthese-meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .synthese-meta-val {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+  .synthese-meta-val.url-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: #6db3ff;
+  }
+
+  .synthese-table-wrap { overflow-x: auto; margin-bottom: 40px; }
+  .synthese-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    min-width: 900px;
+  }
+  .synthese-table th {
+    background: var(--dark);
+    color: rgba(255,255,255,0.75);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 14px 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.07);
+    font-weight: 400;
+    vertical-align: bottom;
+    line-height: 1.4;
+  }
+  .synthese-table th:first-child { text-align: left; min-width: 220px; }
+  .synthese-table th:nth-child(2) { min-width: 90px; }
+  .synthese-table td {
+    padding: 12px 12px;
+    border: 1px solid var(--border);
+    vertical-align: middle;
+    text-align: center;
+    color: var(--mid);
+    font-size: 0.82rem;
+  }
+  .synthese-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--dark);
+    padding-left: 16px;
+  }
+  .synthese-table td:nth-child(2) {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .synthese-table tr.section-row td {
+    background: var(--bg2);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-align: left;
+    padding-left: 16px;
+    border-top: 2px solid var(--accent);
+  }
+  .synthese-table tr:hover td { background: rgba(201,74,30,0.03); }
+  .synthese-table tr.section-row:hover td { background: var(--bg2); }
+  .check-cell {
+    color: var(--accent) !important;
+    font-size: 1rem !important;
+    font-weight: 700;
+  }
+
   /* SCROLL BAR */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -983,6 +1069,7 @@
     <li><a href="#pages">Le site</a></li>
     <li><a href="#veille">Veille</a></li>
     <li><a href="#projets">Mes Projets</a></li>
+    <li><a href="8 - ANNEXE VI.1 - EPREUVE E5 TABLEAU DE SYNTHESE - BTS SIO 2026.pdf" target="_blank">Synthèse E5</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1038,15 +1125,15 @@
 <!-- PARCOURS -->
 <section id="parcours" class="parcours-bg">
   <div class="section-inner">
-    <div class="s-label reveal">01 — Mon parcours</div>
-    <div class="s-title reveal">Mon Parcours</div>
+    <div class="s-label">01 — Mon parcours</div>
+    <div class="s-title">Mon Parcours</div>
 
-    <p class="parcours-text reveal">
+    <p class="parcours-text">
       Passionné par l'informatique depuis plusieurs années, j'ai suivi un parcours scolaire orienté vers mes intérêts. Après l'obtention de mon <strong>baccalauréat général</strong>, j'ai décidé de me lancer dans l'informatique en intégrant une première année de BTS SIO en formation initiale à l'<strong>Institut F2i</strong> en rentrée décalée en 2023.<br><br>
       Pour diverses raisons, je n'ai pas continué directement en deuxième année en 2024. À la place, j'ai effectué une formation de <strong>technicien réseaux IP</strong> de fin 2023 à mai 2024, au terme de laquelle j'ai obtenu le diplôme. Un an plus tard, j'ai réintégré l'Institut F2i en enchaînant directement une <strong>2ème année en option SISR en tant qu'alternant</strong>, sans avoir à repasser une première année.
     </p>
 
-    <div class="formations-grid reveal">
+    <div class="formations-grid">
       <div class="formation-cell">
         <div class="formation-year">2025 – 2026</div>
         <div class="formation-title">Brevet de Technicien Supérieur Services Informatiques aux Organisations</div>
@@ -1071,10 +1158,10 @@
 <!-- EXPÉRIENCES -->
 <section id="experiences">
   <div class="section-inner">
-    <div class="s-label reveal">02 — Expériences professionnelles</div>
-    <div class="s-title reveal">Postes Occupés</div>
+    <div class="s-label">02 — Expériences professionnelles</div>
+    <div class="s-title">Postes Occupés</div>
 
-    <div class="exp-grid reveal">
+    <div class="exp-grid">
       <!-- Poste actuel -->
       <div class="exp-card current">
         <div class="exp-period">Janvier 2026 — En cours</div>
@@ -1105,10 +1192,10 @@
 <!-- PAGES DU SITE -->
 <section id="pages" class="pages-dark">
   <div class="section-inner">
-    <div class="s-label reveal">03 — Navigation</div>
+    <div class="s-label">03 — Navigation</div>
 
-    <div class="s-title reveal">Pages du Site</div>
-    <div class="pages-grid reveal">
+    <div class="s-title">Pages du Site</div>
+    <div class="pages-grid">
       <div class="page-card">
         <div class="page-card-icon">🏠</div>
         <div class="page-card-name">Accueil</div>
@@ -1136,14 +1223,14 @@
 <!-- VEILLE TECHNOLOGIQUE -->
 <section id="veille" class="veille-bg">
   <div class="section-inner">
-    <div class="s-label reveal">04 — Veille technologique</div>
-    <div class="s-title reveal">Veille Technologique</div>
+    <div class="s-label">04 — Veille technologique</div>
+    <div class="s-title">Veille Technologique</div>
 
-    <p class="veille-intro reveal">
+    <p class="veille-intro">
       Dans le cadre du BTS SIO SISR, j'effectue une veille technologique régulière sur les évolutions du secteur des réseaux et systèmes. Ma veille porte sur l'<strong>émergence de la norme 802.11be (Wi-Fi 7)</strong> et son impact sur les infrastructures d'entreprise, notamment à travers l'innovation clé qu'est le <strong>Multi-Link Operation (MLO)</strong>.
     </p>
 
-    <div class="veille-topic-header reveal">
+    <div class="veille-topic-header">
       <div class="veille-topic-icon">📡</div>
       <div>
         <div class="veille-topic-title">La norme IEEE 802.11be — Wi-Fi 7</div>
@@ -1151,7 +1238,7 @@
       </div>
     </div>
 
-    <div class="veille-cards reveal">
+    <div class="veille-cards">
       <div class="veille-card">
         <div class="veille-card-tag">Contexte</div>
         <div class="veille-card-title">Qu'est-ce que le Wi-Fi 7 ?</div>
@@ -1187,7 +1274,7 @@
     </div>
 
     <!-- Tableau comparatif -->
-    <div class="veille-comparison reveal">
+    <div class="veille-comparison">
       <div class="veille-comparison-header">
         <span>Norme Wi-Fi</span>
         <span>Débit max théorique</span>
@@ -1221,7 +1308,7 @@
     </div>
 
     <!-- Impact infra -->
-    <div class="veille-impact reveal">
+    <div class="veille-impact">
       <div class="veille-impact-title">Impact sur l'infrastructure réseau d'entreprise</div>
       <div class="veille-impact-grid">
         <div>
@@ -1242,7 +1329,7 @@
       </div>
     </div>
 
-    <div class="veille-conclusion reveal">
+    <div class="veille-conclusion">
       <div class="veille-conclusion-title">Conclusion & Analyse</div>
       <p>
         Le Wi-Fi 7 représente une rupture technologique majeure pour les réseaux d'entreprise. Le <strong>MLO (Multi-Link Operation)</strong> est la véritable révolution : en permettant l'utilisation simultanée de plusieurs bandes, il rapproche la fiabilité du sans-fil de celle du filaire, ouvrant la voie à des stratégies <strong>wireless-first</strong> même pour des usages critiques.<br><br>
@@ -1266,11 +1353,11 @@
 <!-- MES PROJETS -->
 <section id="projets">
   <div class="section-inner">
-    <div class="s-label reveal">05 — Projets réalisés</div>
-    <div class="s-title reveal">Mes Projets</div>
+    <div class="s-label">05 — Projets réalisés</div>
+    <div class="s-title">Mes Projets</div>
 
     <!-- Projet 1 : AD -->
-    <div class="projet-header reveal">
+    <div class="projet-header">
       <div class="projet-title-block">
         <div class="projet-num">Projet 01 · Épreuve E6</div>
         <h3>Déploiement d'un domaine<br>Active Directory</h3>
@@ -1283,7 +1370,7 @@
       </div>
     </div>
 
-    <div class="projet-infos reveal">
+    <div class="projet-infos">
       <div class="projet-info-cell">
         <div class="projet-info-label">Serveur</div>
         <div class="projet-info-val">SVR-WND</div>
@@ -1302,7 +1389,7 @@
       </div>
     </div>
 
-    <div class="projet-sommaire reveal">
+    <div class="projet-sommaire">
       <div class="sommaire-item"><div class="sommaire-num">1</div><div class="sommaire-text">Configuration réseau du serveur</div></div>
       <div class="sommaire-item"><div class="sommaire-num">2</div><div class="sommaire-text">Installation du rôle AD DS</div></div>
       <div class="sommaire-item"><div class="sommaire-num">3</div><div class="sommaire-text">Création du domaine (promotion DC)</div></div>
@@ -1314,7 +1401,7 @@
       <div class="sommaire-item"><div class="sommaire-num">9</div><div class="sommaire-text">Tests et vérifications</div></div>
     </div>
 
-    <div class="projet-etapes reveal">
+    <div class="projet-etapes">
 
       <!-- Partie 1 -->
       <div class="etape-card">
@@ -1502,8 +1589,8 @@
     </div>
 
     <!-- Récapitulatif -->
-    <div class="projet-section-title reveal">Récapitulatif du déploiement</div>
-    <div class="projet-recap reveal">
+    <div class="projet-section-title">Récapitulatif du déploiement</div>
+    <div class="projet-recap">
       <div class="recap-header">
         <span>Élément</span>
         <span>Configuration</span>
@@ -1527,7 +1614,7 @@
     <div style="height:60px;"></div>
 
     <!-- Projet 2 : GLPI / LDAP -->
-    <div class="projet-header reveal" style="border-left-color: var(--accent2);">
+    <div class="projet-header" style="border-left-color: var(--accent2);">
       <div class="projet-title-block">
         <div class="projet-num">Projet 02 · Épreuve E6</div>
         <h3>Mise en place de GLPI<br>& Intégration LDAP / AD</h3>
@@ -1540,7 +1627,7 @@
       </div>
     </div>
 
-    <div class="projet-infos reveal">
+    <div class="projet-infos">
       <div class="projet-info-cell">
         <div class="projet-info-label">Serveur AD</div>
         <div class="projet-info-val">192.168.1.2</div>
@@ -1559,7 +1646,7 @@
       </div>
     </div>
 
-    <div class="projet-sommaire reveal">
+    <div class="projet-sommaire">
       <div class="sommaire-item"><div class="sommaire-num">1</div><div class="sommaire-text">Introduction et objectifs</div></div>
       <div class="sommaire-item"><div class="sommaire-num">2</div><div class="sommaire-text">Prérequis et compte de service AD</div></div>
       <div class="sommaire-item"><div class="sommaire-num">3</div><div class="sommaire-text">Configuration LDAP dans GLPI</div></div>
@@ -1568,7 +1655,7 @@
       <div class="sommaire-item"><div class="sommaire-num">6</div><div class="sommaire-text">Gestion des profils et des droits</div></div>
     </div>
 
-    <div class="projet-etapes reveal">
+    <div class="projet-etapes">
 
       <!-- Partie 1 -->
       <div class="etape-card">
@@ -1699,8 +1786,8 @@
     </div>
 
     <!-- Récapitulatif Projet 2 -->
-    <div class="projet-section-title reveal">Récapitulatif de la configuration</div>
-    <div class="projet-recap reveal">
+    <div class="projet-section-title">Récapitulatif de la configuration</div>
+    <div class="projet-recap">
       <div class="recap-header">
         <span>Paramètre</span>
         <span>Valeur / Configuration</span>
@@ -1720,6 +1807,21 @@
   </div>
 </section>
 
+<!-- TABLEAU DE SYNTHESE E5 -->
+<section id="synthese" class="synthese-bg">
+  <div class="section-inner">
+    <div class="s-label">06 — Épreuve E5</div>
+    <div class="s-title">Tableau de Synthèse</div>
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--mid); margin-bottom: 32px; font-weight: 300; line-height: 1.75;">
+      Tableau de synthèse des réalisations professionnelles — BTS SIO SISR Session 2026.<br>
+      Candidat : <strong>MOHAMED OSMAN Rami</strong> · N° 01845141717 · Institut F2i
+    </p>
+    <a href="8%20-%20ANNEXE%20VI.1%20-%20EPREUVE%20E5%20TABLEAU%20DE%20SYNTHESE%20-%20BTS%20SIO%202026.pdf" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+      📄 Ouvrir le tableau de synthèse (PDF)
+    </a>
+  </div>
+</section>
+
 <div class="divider"></div>
 
 <!-- CONTACT -->
@@ -1727,10 +1829,10 @@
   <div class="section-inner">
     <div class="contact-inner">
       <div class="contact-left">
-        <div class="s-label reveal">06 — Me contacter</div>
-        <div class="s-title reveal">Contact</div>
-        <p class="reveal">Alternant en BTS SIO SISR, disponible pour échanger sur mes projets, mon parcours ou toute opportunité professionnelle en lien avec l'administration des systèmes et réseaux.</p>
-        <div class="contact-items reveal">
+        <div class="s-label">07 — Me contacter</div>
+        <div class="s-title">Contact</div>
+        <p >Alternant en BTS SIO SISR, disponible pour échanger sur mes projets, mon parcours ou toute opportunité professionnelle en lien avec l'administration des systèmes et réseaux.</p>
+        <div class="contact-items">
           <div class="contact-item">
             <div class="contact-item-icon">🏫</div>
             <div>
@@ -1754,7 +1856,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-right reveal">
+      <div class="contact-right">
         <div class="avail-title">Disponibilités</div>
         <div class="avail-items">
           <div class="avail-item">
@@ -1783,19 +1885,4 @@
 <footer>
   <p>© 2026 — <span>Rami Mohamed Osman</span> · BTS SIO SISR</p>
   <p>Institut F2i · <span>Vincennes (94)</span></p>
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => obs.observe(r));
-</script>
-</body>
-</html>
+</fo
